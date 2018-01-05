@@ -19,18 +19,3 @@ module LinkThumbnailer
   end
 
 end
-
-begin
-  require 'rails'
-rescue LoadError
-end
-
-$stderr.puts <<-EOC if !defined?(Rails)
-warning: no framework detected.
-
-Your Gemfile might not be configured properly.
----- e.g. ----
-Rails:
-    gem 'link_thumbnailer'
-
-EOC
